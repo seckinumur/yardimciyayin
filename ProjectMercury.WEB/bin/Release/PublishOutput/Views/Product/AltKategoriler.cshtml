@@ -1,0 +1,274 @@
+﻿@model List<ProjectMercury.DAL.VMModels.VMAltKategori>
+@{
+    ViewBag.Title = "Choice Admin Control Systems V.1.5 / Alt Kategoriler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="page-wrapper">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Alt Kategorileri Düzenle <button class="btn btn-success" data-toggle="modal" data-target="#Comar"><i class="fa fa-paw"></i> Çomar Yardım</button> </h1>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Tüm Alt Kategoriler Gösteriliyor
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Kategori</th>
+                                <th>Alt Kategori</th>
+                                <th>İşlemler</th>
+                                <th class="text-danger">Force Delete</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+                                foreach (var item in Model)
+                                {
+                                    <tr>
+                                        <td>@item.KategoriIsmi</td>
+                                        <td>@item.AltKategoriAdi</td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#myModal" class="btn btn-warning" onclick="Islem('@item.AltKategoriID','@item.AltKategoriAdi')" disabled="@(item.UrunVarmi == true ? true : false)">AltKategoriyi Sil</button>
+                                            <button data-toggle="modal" data-target="#Duzenle" class="btn btn-info" onclick="Islem('@item.AltKategoriID','@item.AltKategoriAdi','@item.KategoriIsmi')">AltKategoriyi Düzenle</button>
+                                        </td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#Force" class="btn btn-success" onclick="Islem('@item.AltKategoriID','@item.AltKategoriAdi')">Tüm İçeriği Sil</button>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="modal fade" id="Comar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">ÇOMAR AI V.1.2 (ALPHA)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                ÇOMAR YARDIM
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    Merhaba! Ben SiteRobotu Çomar. Bu Sayfada Ürünlerinizin Alt Kategorilerini Düzenleyebilirsiniz.
+                                    <hr style="color:blue;" />
+                                    <strong style="color:red;">Alt Kategori Bir Kategorinin Temel Sınıfıdır.</strong>
+                                    <hr />
+                                    Eğer Sil Butonu Çalışmıyorsa Bir Veya Daha Fazla Ürün Silmeye Çalıştığınız Sınıfı
+                                    Kullanıyor Demektir. Bu durumda Silemezseniz.
+                                    <hr class="text-danger" />
+                                    <strong class="text-info">FORCE DELETE</strong> Tüm Alt Kategoriyi Ve İçersinde Bulunan Tüm Data'yı Yok Eder.
+                                    Bu Geri Dönülmez Bir Silme İşlemidir. Bu İşlemi Yapmadan Önce Dikkatli Olun.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                Haydi Hazırsanız Şimdi Bir Alt Kategori ekleyelim...
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Alt Kategori Silme</h4>
+                    </div>
+                    <form role="form" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="AltKategoriID" id="SilID" />
+                            <input type="hidden" name="Gorev" value="Sil" />
+                            <div class="form-group">
+                                <input class="form-control" readonly="readonly" style="color:orangered" id="Silinecek">
+                                <label>Bu Alt Kategori Silenecek Devam Edilsin mi?</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-warning">SİL</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Force" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title text-danger" id="myModalLabel">FORCE DELETE</h4>
+                    </div>
+                    <form role="form" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="AltKategoriID" id="SilIDF" />
+                            <input type="hidden" name="Gorev" value="Force" />
+                            <div class="form-group">
+                                <input class="form-control" readonly="readonly" style="color:orangered" id="SilinecekF">
+                                <label>Bu Alt Kategori ve Tüm İçeriği Tamamen Silenecek Devam Edilsin mi?</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-warning">Tüm Bilgileri Yok Et</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Duzenle" tabindex="-1" role="dialog" aria-labelledby="DuzenleLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="DuzenleLabel">Alt Kategori Düzenle</h4>
+                    </div>
+                    <form role="form" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="AltKategoriID" id="ID" />
+                            <input type="hidden" name="Gorev" value="Guncelle" />
+                            <div class="form-group">
+                                <label>Bu Alt Kategori Güncellenecek Devam Edilsin mi?</label>
+                                <div class="form-group">
+                                    <label>Alt Kategori Adı</label>
+                                    <input class="form-control" name="AltkategoriAdi" id="kategoriAdi" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Mevcut Kategorisi</label>
+                                    <input class="form-control" id="KatGonder" readonly="readonly">
+                                </div>
+                                <div class="form-group">
+                                    <label>Kategori Adı</label>
+                                    <select class="selectpicker form-control" data-live-search="true" name="KategoriIsmi">
+                                        @{
+                                            foreach (var item in ProjectMercury.DAL.Repository.KategoriRepo.KategorilerIsim())
+                                            {
+                                                <option data-tokens="@item.KategoriAdi">@item.KategoriAdi</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        ÇOMAR AI V.1.2 (ALPHA)
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>
+                                            Merhaba! Ben SiteRobotu Çomar. Şimdi Seçtiğiniz Alt Kategorinin ismini Görüyor Olmalısınız.
+                                            Buradan Alt Kategorinin İsmini Yeniden Adlandırabilirsiniz. <strong style="color:red;">
+                                                ! Lütfen Dikkat... Unutmayın Ki Alt Kategorinin İsmini Değiştirmek İlgili Ürünlerin
+                                                Tümün Ve Ürün Kategorilerinin Tümünün Anlam Değişikliğine Sebep Olabilir.
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        Hazırsanız Şimdi Alt Kategoriyi Güncelleyelim...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-warning">Güncelle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Ekle" tabindex="-1" role="dialog" aria-labelledby="EkleLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="EkleLabel">Alt Kategori Ekle</h4>
+                    </div>
+                    <form role="form" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="Gorev" value="Ekle" />
+                            <div class="form-group">
+                                <label>Yeni Bir Alt Kategori Eklenecek Devam Edilsin mi?</label>
+                                <div class="form-group">
+                                    <label>Alt Kategori Adı</label>
+                                    <input class="form-control" name="AltKategoriAdi" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Kategori Adı</label>
+                                    <select class="selectpicker form-control" data-live-search="true" name="KategoriIsmi">
+                                        @{
+                                            foreach (var item in ProjectMercury.DAL.Repository.KategoriRepo.KategorilerIsim())
+                                            {
+                                                <option data-tokens="@item.KategoriAdi">@item.KategoriAdi</option>
+                                            }
+                                        }
+                                    </select>
+                                </div>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        ÇOMAR AI V.1.2 (ALPHA)
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>
+                                            Merhaba! Ben SiteRobotu Çomar. Bu Menüden Yeni Bir Alt Kategori Ekleyebilirsiniz.
+                                            Yeni bir Alt Kategori Ürünlerin ve Ürün Kategorini Tek Türde Toplanacağı Ana
+                                            Başlıktır.<strong>
+                                                Yeni Bir Alt Kategori Oluştururken Ürün Kategorine Mantıklı Olabilmesi
+                                                İçin Doğru Bir İsim Seçilmesi Çok Önemlidir.
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        Hazırsanız Şimdi Yeni Bir Alt Kategori Ekleyelim...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-warning">Ekle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-12">
+            <div>
+                <button data-toggle="modal" data-target="#Ekle" class="btn btn-info col-lg-12">Alt Kategori Ekle</button>
+                <p class="text-warning"><strong>Bir Alt Kategori Eklemek İçin Alt Kategori Ekle Butonuna Basın</strong></p>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript">
+    function Islem(obj, obj2,obj3) {
+        document.getElementById("kategoriAdi").value = obj2;
+        document.getElementById("SilID").value = obj;
+        document.getElementById("ID").value = obj;
+        document.getElementById("Silinecek").value = obj2;
+        document.getElementById("KatGonder").value = obj3;
+        document.getElementById("SilIDF").value = obj;
+        document.getElementById("SilinecekF").value = obj2;
+    }
+</script>
+

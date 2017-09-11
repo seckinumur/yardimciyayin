@@ -1,0 +1,197 @@
+﻿@model ProjectMercury.DAL.VMModels.UrunAI
+@{
+    Layout = "~/Views/Shared/_LayoutView.cshtml";
+}
+
+<section class="section light-backgorund">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-4 col-md-3">
+                <div class="navbar-vertical">
+                    <ul class="nav nav-stacked">
+                        <li class="header">
+                            <h6 class="text-uppercase">Kategoriler <i class="fa fa-navicon pull-right"></i></h6>
+                        </li>
+                        @{
+                            foreach (var item in ProjectMercury.DAL.Repository.KategoriRepo.Kategoriler())
+                            {
+                                <li>
+                                    <a class="dropdown-toggle"  href="~/View/Kategori/@item.KategoriID">
+                                        @item.KategoriAdi
+                                    </a>
+                                </li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+
+            <div id="myCarousel" class="carousel slide col-sm-8 col-md-9" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="@Model.slider1" alt="Los Angeles" style="width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src="@Model.slider2" alt="Chicago" style="width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src="@Model.slider3" alt="New york" style="width:100%;">
+                    </div>
+                    <div class="item">
+                        <img src="@Model.slider4" alt="New york" style="width:100%;">
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</section>
+<!-- Kampanyalı Ürünler -->
+<section class="section white-backgorund">
+    <div class="container">
+
+        <h5 class=" text-center text-success"><i class="fa fa-diamond"></i> Hit 5 Ürünle Herşey</h5>
+        <hr class="spacer-20 no-border" />
+       <div class="row">
+                <div class="col-sm-4">
+                    <div class="widget">
+                        <h5 class="subtitle text-uppercase"><span class="text-primary">Yeni</span> Ürünler</h5>
+                        @{ if (Model.EnYeni != null)
+                            {
+                                foreach (var yeniurun in Model.EnYeni)
+                                {
+                                    <ul class="items">
+                                        <li>
+                                            <a href="shop-single-product-v1.html" class="product-image" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@yeniurun.UrunAdi','@yeniurun.Image','@yeniurun.UrunFiyati','@yeniurun.IndirimliFiyati','@yeniurun.UrunAciklama')">
+                                                <img src="@yeniurun.Image" alt="@yeniurun.UrunAdi" class="img-responsive">
+                                            </a>
+                                            <div class="product-details">
+                                                <h6 class="regular">
+                                                    <a href="#" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@yeniurun.UrunAdi','@yeniurun.Image','@yeniurun.UrunFiyati','@yeniurun.IndirimliFiyati','@yeniurun.UrunAciklama')" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">@yeniurun.UrunAdi</a>
+                                                </h6>
+                                                <span class="price text-primary">@yeniurun.IndirimliFiyati ₺</span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+               
+                <div class="col-sm-4">
+                    <div class="widget">
+                        <h5 class="subtitle text-uppercase"><span class="text-primary">Günün Fırsatı</span> Ürünler</h5>
+
+                        @{  if (Model.GununFirsati != null)
+                            {
+                                foreach (var yeniurun in Model.GununFirsati)
+                                {
+                                <ul class="items">
+                                    <li>
+                                        <a href="shop-single-product-v1.html" class="product-image" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@yeniurun.UrunAdi','@yeniurun.Image','@yeniurun.UrunFiyati','@yeniurun.IndirimliFiyati','@yeniurun.UrunAciklama')">
+                                            <img src="@yeniurun.Image" alt="@yeniurun.UrunAdi" class="img-responsive">
+                                        </a>
+                                        <div class="product-details">
+                                            <h6 class="regular">
+                                                <a href="shop-single-product-v1.html" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@yeniurun.UrunAdi','@yeniurun.Image','@yeniurun.UrunFiyati','@yeniurun.IndirimliFiyati','@yeniurun.UrunAciklama')" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">@yeniurun.UrunAdi</a>
+                                            </h6>
+                                            <span class="price text-primary">@yeniurun.IndirimliFiyati₺</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <div class="widget">
+                        <h5 class="subtitle text-uppercase"><span class="text-primary">En Çok Satılan</span> Ürünler </h5>
+                        @{ if (Model.EnCokSatan != null)
+                            {
+                                foreach (var yeniurun in Model.EnCokSatan)
+                                {
+                                <ul class="items">
+                                    <li>
+                                        <a href="shop-single-product-v1.html" class="product-image" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@yeniurun.UrunAdi','@yeniurun.Image','@yeniurun.UrunFiyati','@yeniurun.IndirimliFiyati','@yeniurun.UrunAciklama')">
+                                            <img src="@yeniurun.Image" alt="@yeniurun.UrunAdi" class="img-responsive">
+                                        </a>
+                                        <div class="product-details">
+                                            <h6 class="regular">
+                                                <a href="shop-single-product-v1.html" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@yeniurun.UrunAdi','@yeniurun.Image','@yeniurun.UrunFiyati','@yeniurun.IndirimliFiyati','@yeniurun.UrunAciklama')" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">@yeniurun.UrunAdi</a>
+                                            </h6>
+                                            <span class="price text-primary">@yeniurun.IndirimliFiyati₺</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+
+           <div class="modal fade productQuickView" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+               <div class="modal-dialog modal-lg" role="document">
+                   <div class="modal-content">
+                       <div class="modal-header">
+                           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                           <h5 id="urunAdi"></h5>
+                       </div>
+                       <div class="modal-body">
+                           <div class="row">
+                               <div class="col-sm-5">
+                                   <div class='carousel slide product-slider' data-ride='carousel' data-interval="false">
+                                       <div class='carousel-inner'>
+                                           <div class='item active'>
+                                               <figure>
+                                                   <img id="urunResmi" />
+                                               </figure>
+                                           </div>
+                                       </div>
+                                   </div>
+                               </div>
+                               <div class="col-sm-7">
+                                   <h4 class="text-primary" id="urunIndirim">$79.00</h4>
+                                   <small id="urunFiyati" class="amount off"></small>
+                                   <hr class="text-danger" />
+                                   <div class="col-md-pull-12">
+                                       <p class="text-danger" id="urunAciklama"></p>
+                                   </div>
+                               </div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+
+
+            </div>
+            </div>
+        </section>
+
+<script type="text/javascript">
+    function DataGom(obj, obj2, obj3, obj4, obj5) {
+        document.getElementById("urunAdi").innerHTML = obj;
+        document.getElementById("urunResmi").src = obj2;
+        document.getElementById("urunFiyati").innerHTML = "Ürün Fiyatı: " + obj3 + "₺";
+        document.getElementById("urunIndirim").innerHTML = "İndirimli Fiyatı: " + obj4 + "₺";
+        document.getElementById("urunAciklama").innerHTML = obj5;
+    };
+</script>

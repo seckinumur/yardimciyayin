@@ -1,0 +1,449 @@
+﻿@model List<ProjectMercury.DAL.VMModels.VMUyeler>
+    @{
+        ViewBag.Title = "Choice Admin Control Systems V.1.5 / Üyeler";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+    <div id="page-wrapper">
+        <div class="row">
+
+            <div class="col-lg-12">
+                <h1 class="page-header">Üyeler <button class="btn btn-success" data-toggle="modal" data-target="#Comar"><i class="fa fa-paw"></i> Çomar Yardım</button> </h1>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        Tüm Üyeler Gösteriliyor
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                            <thead>
+                                <tr>
+                                    <th>Üye Adı Soyadı</th>
+                                    <th>Mail Adresi</th>
+                                    <th>Şifre</th>
+                                    <th>Telefon</th>
+                                    <th>İl</th>
+                                    <th>Adres</th>
+                                    <th>Üye Tarihi</th>
+                                    <th>İşlemler</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @{
+                                    foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>@item.UyeAdiSoyadi</td>
+                                            <td>@item.MailAdresi</td>
+                                            <td>@item.Sifre</td>
+                                            <td>@item.Telefon</td>
+                                            <td>@item.Il</td>
+                                            <td>@item.Adres</td>
+                                            <td>@item.Tarih</td>
+                                            <td>
+                                                <button data-toggle="modal" data-target="#myModal" class="btn btn-warning" onclick="Islem('@item.UyelerID','@item.UyeAdiSoyadi')">Sil</button>
+                                                <button data-toggle="modal" data-target="#UyeDuzenle" class="btn btn-info" onclick="Duzenle('@item.UyelerID','@item.UyeAdiSoyadi','@item.MailAdresi','@item.Sifre','@item.Telefon','@item.Il','@item.Adres')">Düzenle</button>
+                                                <button class="btn btn-warning" data-toggle="modal" data-target="#Banla" disabled="@(item.Banlimi == true ? true : false)" onclick="BanIslemi('@item.UyelerID','@item.UyeAdiSoyadi')">Banla</button>
+                                                <button class="btn btn-success" data-toggle="modal" data-target="#BANKaldir" disabled="@(item.Banlimi == false ? true : false)" onclick="BanIslemi('@item.UyelerID','@item.UyeAdiSoyadi')">Ban Kaldır</button>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="modal fade" id="Comar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">ÇOMAR AI V.1.2 (ALPHA)</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="panel panel-green">
+                                <div class="panel-heading">
+                                    ÇOMAR YARDIM
+                                </div>
+                                <div class="panel-body">
+                                    <p>
+                                        Merhaba! Ben SiteRobotu Çomar. Bu Sayfada Üyelerinizi Görebilir. Üyelerin Bilgilerini Düzenleyebilir Yada
+                                        Üyelerinizi Silebilirsiniz. <strong style="color:red">Dikkat!</strong> Üye Silmek Tüm Üyelik Bilgilerini
+                                        ve Tüm Satım Alma İşlemlerini Siler.
+                                        <hr />
+                                        <strong style="color:blue">Eğer Üye İle İlgili Sıkıntılar Yaşıyorsanız ve Üyeyi Silmek İstemiyorsanız üyeyi
+                                        Banlayabilirsiniz. Banlanmış Üye Sipariş Verirken Banlandığını Görecektir. Alışveriş Sepeti Dolu Olsa Bile
+                                        Sipariş Veremeyecektir.</strong>
+                                    </p>
+                                </div>
+                                <div class="panel-footer">
+                                    Haydi Hazırsanız Şimdi Bir Üyeye Bakalım...
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Üye Silme</h4>
+                        </div>
+                        <form role="form" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="UyelerID" id="SilID" />
+                                <input type="hidden" name="Gorev" value="Sil" />
+                                <div class="form-group">
+                                    <input class="form-control" readonly="readonly" style="color:orangered" id="Silinecek">
+                                    <label style="color:orangered">Üye Silenecek Devam Edilsin mi?</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                <button type="submit" class="btn btn-warning">SİL</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="Banla" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Üye Banlama</h4>
+                        </div>
+                        <form role="form" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="UyelerID" id="BanUyeID" />
+                                <input type="hidden" name="Gorev" value="Banla" />
+                                <div class="form-group">
+                                    <input class="form-control" readonly="readonly" style="color:orangered" id="UyeAdiBan">
+                                    <label style="color:orangered">Bu Üyeyi Banlamak İstediğinizden Eminmisiniz ?</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                <button type="submit" class="btn btn-warning">Banla</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="BANKaldir" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Üye Ban Kaldırma</h4>
+                        </div>
+                        <form role="form" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="UyelerID" id="BanUyeID1" />
+                                <input type="hidden" name="Gorev" value="BanKaldir" />
+                                <div class="form-group">
+                                    <input class="form-control" readonly="readonly" style="color:orangered" id="UyeAdiBan1">
+                                    <label style="color:orangered">Bu Üyeden Ban Kaldırmak İstediğinizden Eminmisiniz ?</label>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                <button type="submit" class="btn btn-warning">Ban Kaldır</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal fade" id="UyeDuzenle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Düzenle İşlemleri</h4>
+                        </div>
+                        <form role="form" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="UyelerID" id="DuzenleID" />
+                                <input type="hidden" name="Gorev" value="Duzenle" />
+                                    <div class="form-group">
+                                        <label class="text-primary">Üye Adı Soyadı</label>
+                                        <input class="form-control" name="UyeAdiSoyadi" id="UyeAdi" placeholder="Üye Adı Soyadı" required>
+                                    </div>
+                                <div class="form-group">
+                                    <label class="text-primary">E-Mail</label>
+                                    <input class="form-control" name="MailAdresi" id="Email" placeholder="E-Mail" required>
+                                </div>
+                                    <div class="form-group">
+                                        <label class="text-primary">Şifre</label>
+                                        <input class="form-control" name="Sifre" id="Sifresi" placeholder="Şifre" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="text-primary">Telefon</label>
+                                        <input class="form-control" name="Telefon" id="Tel" placeholder="Telefon" required>
+                                    </div>
+                                    
+                                <div class="form-group">
+                                    <select class="selectpicker form-control" name="Il" data-live-search="true" id="Il">
+                                        <option data-tokens="Adana">Adana</option>
+                                        <option data-tokens="Adıyaman">Adıyaman</option>
+                                        <option data-tokens="Afyonkarahisar">Afyonkarahisar</option>
+                                        <option data-tokens="Ağrı">Ağrı</option>
+                                        <option data-tokens="Amasya">Amasya</option>
+                                        <option data-tokens="Ankara">Ankara</option>
+                                        <option data-tokens="Antalya">Antalya</option>
+                                        <option data-tokens="Artvin">Artvin</option>
+                                        <option data-tokens="Aydın">Aydın</option>
+                                        <option data-tokens="Balıkesir">Balıkesir</option>
+                                        <option data-tokens="Bilecik">Bilecik</option>
+                                        <option data-tokens="Bingöl">Bingöl</option>
+                                        <option data-tokens="Bitlis">Bitlis</option>
+                                        <option data-tokens="Bolu">Bolu</option>
+                                        <option data-tokens="Burdur">Burdur</option>
+                                        <option data-tokens="Bursa">Bursa</option>
+                                        <option data-tokens="Çanakkale">Çanakkale</option>
+                                        <option data-tokens="Çankırı">Çankırı</option>
+                                        <option data-tokens="Çorum">Çorum</option>
+                                        <option data-tokens="Denizli">Denizli</option>
+                                        <option data-tokens="Diyarbakır">Diyarbakır</option>
+                                        <option data-tokens="Edirne">Edirne</option>
+                                        <option data-tokens="Elazığ">Elazığ</option>
+                                        <option data-tokens="Erzincan">Erzincan</option>
+                                        <option data-tokens="Erzurum">Erzurum</option>
+                                        <option data-tokens="Eskişehir">Eskişehir</option>
+                                        <option data-tokens="Gaziantep">Gaziantep</option>
+                                        <option data-tokens="Giresun">Giresun</option>
+                                        <option data-tokens="Gümüşhane">Gümüşhane</option>
+                                        <option data-tokens="Hakkari">Hakkâri</option>
+                                        <option data-tokens="Hatay">Hatay</option>
+                                        <option data-tokens="Isparta">Isparta</option>
+                                        <option data-tokens="Mersin">Mersin</option>
+                                        <option data-tokens="İstanbul">İstanbul</option>
+                                        <option data-tokens="İzmir">İzmir</option>
+                                        <option data-tokens="Kars">Kars</option>
+                                        <option data-tokens="Kastamonu">Kastamonu</option>
+                                        <option data-tokens="Kayseri">Kayseri</option>
+                                        <option data-tokens="Kırklareli">Kırklareli</option>
+                                        <option data-tokens="Kırşehir">Kırşehir</option>
+                                        <option data-tokens="Kocaeli">Kocaeli</option>
+                                        <option data-tokens="Konya">Konya</option>
+                                        <option data-tokens="Kütahya">Kütahya</option>
+                                        <option data-tokens="Malatya">Malatya</option>
+                                        <option data-tokens="Manisa">Manisa</option>
+                                        <option data-tokens="Kahramanmaraş">Kahramanmaraş</option>
+                                        <option data-tokens="Mardin">Mardin</option>
+                                        <option data-tokens="Muğla">Muğla</option>
+                                        <option data-tokens="Muş">Muş</option>
+                                        <option data-tokens="Nevşehir">Nevşehir</option>
+                                        <option data-tokens="Niğde">Niğde</option>
+                                        <option data-tokens="Ordu">Ordu</option>
+                                        <option data-tokens="Rize">Rize</option>
+                                        <option data-tokens="Sakarya">Sakarya</option>
+                                        <option data-tokens="Samsun">Samsun</option>
+                                        <option data-tokens="Siirt">Siirt</option>
+                                        <option data-tokens="Sinop">Sinop</option>
+                                        <option data-tokens="Sivas">Sivas</option>
+                                        <option data-tokens="Tekirdağ">Tekirdağ</option>
+                                        <option data-tokens="Tokat">Tokat</option>
+                                        <option data-tokens="Trabzon">Trabzon</option>
+                                        <option data-tokens="Tunceli">Tunceli</option>
+                                        <option data-tokens="Şanlıurfa">Şanlıurfa</option>
+                                        <option data-tokens="Uşak">Uşak</option>
+                                        <option data-tokens="Van">Van</option>
+                                        <option data-tokens="Yozgat">Yozgat</option>
+                                        <option data-tokens="Zonguldak">Zonguldak</option>
+                                        <option data-tokens="Aksaray">Aksaray</option>
+                                        <option data-tokens="Bayburt">Bayburt</option>
+                                        <option data-tokens="Karaman">Karaman</option>
+                                        <option data-tokens="Kırıkkale">Kırıkkale</option>
+                                        <option data-tokens="Batman">Batman</option>
+                                        <option data-tokens="Şırnak">Şırnak</option>
+                                        <option data-tokens="Bartın">Bartın</option>
+                                        <option data-tokens="Ardahan">Ardahan</option>
+                                        <option data-tokens="Iğdır">Iğdır</option>
+                                        <option data-tokens="Yalova">Yalova</option>
+                                        <option data-tokens="Karabük">Karabük</option>
+                                        <option data-tokens="Kilis">Kilis</option>
+                                        <option data-tokens="Osmaniye">Osmaniye</option>
+                                        <option data-tokens="Düzce">Düzce</option>
+                                    </select>
+                                </div>
+
+                                    <div class="form-group">
+                                        <label class="text-primary">Adres</label>
+                                        <input class="form-control" name="Adres" id="Adres" placeholder="Adres" required>
+                                    </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                <button type="submit" class="btn btn-warning">Kaydet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="modal fade" id="Ekle" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                            <h4 class="modal-title" id="myModalLabel">Üye Ekleme</h4>
+                        </div>
+                        <form role="form" method="post">
+                            <div class="modal-body">
+                                <input type="hidden" name="Gorev" value="Ekle" />
+                                <div class="form-group">
+                                    <input class="form-control"name="UyeAdiSoyadi"  placeholder="Üye Adı Soyadı" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="MailAdresi" placeholder="E-Mail" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="Sifre" placeholder="Şifre" required>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control" name="Telefon" placeholder="Telefon" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <select class="selectpicker form-control" data-live-search="true" name="Il">
+                                        <option data-tokens="Adana">Adana</option>
+                                        <option data-tokens="Adıyaman">Adıyaman</option>
+                                        <option data-tokens="Afyonkarahisar">Afyonkarahisar</option>
+                                        <option data-tokens="Ağrı">Ağrı</option>
+                                        <option data-tokens="Amasya">Amasya</option>
+                                        <option data-tokens="Ankara">Ankara</option>
+                                        <option data-tokens="Antalya">Antalya</option>
+                                        <option data-tokens="Artvin">Artvin</option>
+                                        <option data-tokens="Aydın">Aydın</option>
+                                        <option data-tokens="Balıkesir">Balıkesir</option>
+                                        <option data-tokens="Bilecik">Bilecik</option>
+                                        <option data-tokens="Bingöl">Bingöl</option>
+                                        <option data-tokens="Bitlis">Bitlis</option>
+                                        <option data-tokens="Bolu">Bolu</option>
+                                        <option data-tokens="Burdur">Burdur</option>
+                                        <option data-tokens="Bursa">Bursa</option>
+                                        <option data-tokens="Çanakkale">Çanakkale</option>
+                                        <option data-tokens="Çankırı">Çankırı</option>
+                                        <option data-tokens="Çorum">Çorum</option>
+                                        <option data-tokens="Denizli">Denizli</option>
+                                        <option data-tokens="Diyarbakır">Diyarbakır</option>
+                                        <option data-tokens="Edirne">Edirne</option>
+                                        <option data-tokens="Elazığ">Elazığ</option>
+                                        <option data-tokens="Erzincan">Erzincan</option>
+                                        <option data-tokens="Erzurum">Erzurum</option>
+                                        <option data-tokens="Eskişehir">Eskişehir</option>
+                                        <option data-tokens="Gaziantep">Gaziantep</option>
+                                        <option data-tokens="Giresun">Giresun</option>
+                                        <option data-tokens="Gümüşhane">Gümüşhane</option>
+                                        <option data-tokens="Hakkari">Hakkâri</option>
+                                        <option data-tokens="Hatay">Hatay</option>
+                                        <option data-tokens="Isparta">Isparta</option>
+                                        <option data-tokens="Mersin">Mersin</option>
+                                        <option data-tokens="İstanbul">İstanbul</option>
+                                        <option data-tokens="İzmir">İzmir</option>
+                                        <option data-tokens="Kars">Kars</option>
+                                        <option data-tokens="Kastamonu">Kastamonu</option>
+                                        <option data-tokens="Kayseri">Kayseri</option>
+                                        <option data-tokens="Kırklareli">Kırklareli</option>
+                                        <option data-tokens="Kırşehir">Kırşehir</option>
+                                        <option data-tokens="Kocaeli">Kocaeli</option>
+                                        <option data-tokens="Konya">Konya</option>
+                                        <option data-tokens="Kütahya">Kütahya</option>
+                                        <option data-tokens="Malatya">Malatya</option>
+                                        <option data-tokens="Manisa">Manisa</option>
+                                        <option data-tokens="Kahramanmaraş">Kahramanmaraş</option>
+                                        <option data-tokens="Mardin">Mardin</option>
+                                        <option data-tokens="Muğla">Muğla</option>
+                                        <option data-tokens="Muş">Muş</option>
+                                        <option data-tokens="Nevşehir">Nevşehir</option>
+                                        <option data-tokens="Niğde">Niğde</option>
+                                        <option data-tokens="Ordu">Ordu</option>
+                                        <option data-tokens="Rize">Rize</option>
+                                        <option data-tokens="Sakarya">Sakarya</option>
+                                        <option data-tokens="Samsun">Samsun</option>
+                                        <option data-tokens="Siirt">Siirt</option>
+                                        <option data-tokens="Sinop">Sinop</option>
+                                        <option data-tokens="Sivas">Sivas</option>
+                                        <option data-tokens="Tekirdağ">Tekirdağ</option>
+                                        <option data-tokens="Tokat">Tokat</option>
+                                        <option data-tokens="Trabzon">Trabzon</option>
+                                        <option data-tokens="Tunceli">Tunceli</option>
+                                        <option data-tokens="Şanlıurfa">Şanlıurfa</option>
+                                        <option data-tokens="Uşak">Uşak</option>
+                                        <option data-tokens="Van">Van</option>
+                                        <option data-tokens="Yozgat">Yozgat</option>
+                                        <option data-tokens="Zonguldak">Zonguldak</option>
+                                        <option data-tokens="Aksaray">Aksaray</option>
+                                        <option data-tokens="Bayburt">Bayburt</option>
+                                        <option data-tokens="Karaman">Karaman</option>
+                                        <option data-tokens="Kırıkkale">Kırıkkale</option>
+                                        <option data-tokens="Batman">Batman</option>
+                                        <option data-tokens="Şırnak">Şırnak</option>
+                                        <option data-tokens="Bartın">Bartın</option>
+                                        <option data-tokens="Ardahan">Ardahan</option>
+                                        <option data-tokens="Iğdır">Iğdır</option>
+                                        <option data-tokens="Yalova">Yalova</option>
+                                        <option data-tokens="Karabük">Karabük</option>
+                                        <option data-tokens="Kilis">Kilis</option>
+                                        <option data-tokens="Osmaniye">Osmaniye</option>
+                                        <option data-tokens="Düzce">Düzce</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <input class="form-control" name="Adres" placeholder="Adres" required>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                                <button type="submit" class="btn btn-warning">Kaydet</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-12">
+            <div>
+                <button data-toggle="modal" data-target="#Ekle" class="btn btn-info col-lg-12">Üye Ekle</button>
+                <p class="text-warning"><strong>Manuel sisteme Üye Ekleme</strong></p>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        function Duzenle(obj, obj1,obj3,obj4,obj5,obj6,obj7) {
+            document.getElementById("DuzenleID").value = obj;
+            document.getElementById("UyeAdi").value = obj1;
+            document.getElementById("Sifresi").value = obj4;
+            document.getElementById("Tel").value = obj5;
+            document.getElementById("Email").value = obj3;
+            $('#Il').selectpicker('val', obj6);
+            document.getElementById("Adres").value = obj7;
+        }
+        function BanIslemi(obj, ob2) {
+            document.getElementById("BanUyeID").value = obj;
+            document.getElementById("UyeAdiBan").value = ob2;
+            document.getElementById("BanUyeID1").value = obj;
+            document.getElementById("UyeAdiBan1").value = ob2;
+        }
+        function Islem(obj, obj2) {
+            document.getElementById("SilID").value = obj;
+            document.getElementById("Silinecek").value = obj2;
+        }
+    </script>

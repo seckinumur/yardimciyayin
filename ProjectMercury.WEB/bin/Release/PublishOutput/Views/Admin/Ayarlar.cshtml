@@ -1,0 +1,427 @@
+﻿@model ProjectMercury.DAL.VMModels.VMAyarlar
+@{
+    ViewBag.Title = "Choice Admin Control Systems V.1.5 / Ayarlar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div id="page-wrapper">
+    <div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Ayarlar <button class="btn btn-success" data-toggle="modal" data-target="#Comar"><i class="fa fa-paw"></i> Çomar Yardım</button></h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Kullanıcılar gösteriliyor
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="dataTables-example">
+                        <thead>
+                            <tr>
+                                <th>Kullanıcı Adı</th>
+                                <th>Şifresi</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+
+                                foreach (var item in Model.Kullanicilar)
+                                {
+                                    <tr>
+                                        <td>@item.KullaniciAdi</td>
+                                        <td>@item.KullaniciSifre</td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#myModal" class="btn btn-warning" onclick="Islem('@item.KullanicilarID','@item.KullaniciAdi')">Kullanıcıyı Sil</button>
+                                            <button data-toggle="modal" data-target="#Duzenle" class="btn btn-info" onclick="Islem2('@item.KullanicilarID','@item.KullaniciAdi','@item.KullaniciSifre')">Kullanıcıyı Düzenle</button>
+                                        </td>
+                                    </tr>
+
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-12">
+                <button data-toggle="modal" data-target="#Ekle" class="btn btn-info col-lg-12">Kullanıcı Ekle</button>
+                <p class="text-warning"><strong>Bir Kullanıcı Eklemek İçin Kullanıcı Ekle Butonuna Basın</strong></p>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Slider
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <table width="100%" class="table table-striped table-bordered table-hover" id="Slider">
+                        <thead>
+                            <tr>
+                                <th>Slider No</th>
+                                <th>Slider</th>
+                                <th>İşlemler</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @{
+
+                                foreach (var item in Model.Sliderler)
+                                {
+                                    <tr>
+                                        <td>@item.SliderID</td>
+                                        <td><img src="@item.Image" width="60" /></td>
+                                        <td>
+                                            <button data-toggle="modal" data-target="#slidermodal" class="btn btn-warning" onclick="Islem3('@item.SliderID','@item.Image')">Değiştir & Bak</button>
+                                        </td>
+                                    </tr>
+
+                                }
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Comar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">ÇOMAR AI V.1.2 (ALPHA)</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="panel panel-green">
+                            <div class="panel-heading">
+                                ÇOMAR YARDIM
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    Merhaba! Ben SiteRobotu Çomar. Bu Sayfada Sitenizin Bilgilerini Düzenleyebilir, Sisteme Erişimi Olan Kullanıcıları
+                                    Düzenleyebilirsiniz. Sitenizin Logosunu Yükleyebilir Değiştirebilirsiniz. Logo Otomatik Ölçeklendirilecektir.
+                                    <hr />
+                                    <strong class="text-danger">Lütfen Dikkat!</strong>
+                                    <hr />
+                                    <strong>Sisteme Erişim Vericeğiniz Kullanıcıların Tüm Yetkilere Sahip Olacağını Unutmayın.</strong> Bu Versiyonda Kullanıcı
+                                    Yetkilendirme Sistemi Mevcut Olmadığı İçin Tüm Kullanıcılar Admin Modda Çalışır. Bu Konuda Oluşabilecek Tüm Veri Kayıpları
+                                    Kullanıcılara Aittir. Bu Beyan Sorumluluk Reddi Yerine Geçer Ve Tüm Kullanıcılar Sistemi Kullanarak İşbu Sözleşmeyi Kabul Etmiş
+                                    Sayılır.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                Evet Kabul Ettiğimi Beyan Ederim.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Sifirla" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel"><i class="fa fa-trash-o"></i> Siteyi Sıfırla!</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="panel panel-danger">
+                            <div class="panel-heading">
+                                <i class="fa fa-repeat"></i> Sistem Geri Yükleme
+                            </div>
+                            <div class="panel-body">
+                                <p>
+                                    <strong>Lütfen Dikkat!</strong> Bu Noktadan Sonra Devam Etmek Geri dönüşü Olmayan Veri Kaybına Yol Açacaktır.
+                                    <hr />
+                                    <strong class="text-danger">Sistemin Kendi Kendini Yok Etmesini Durdurmak İçin Bu Pencereyi Kapatın.</strong>
+                                    <hr />
+                                    <strong>Siteyi Geri Dönüştürmek</strong> İçin Tüm Bilgilerinizin Silineceğini Unutmayın.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                <a href="~/Admin/Format" class="btn btn-danger">Evet Kabul Ettiğimi Beyan Ederim.</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="myModalLabel">Kullanıcı Silme</h4>
+                    </div>
+                    <form role="form" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="KullanicilarID" id="SilmeAl" />
+                            <input type="hidden" name="Gorev" value="Sil" />
+                            <div class="form-group">
+                                <input class="form-control" readonly="readonly" style="color:orangered" id="Silinecek">
+                                <label>Bu Kullanıcı Silinecek Devam Edilsin mi?</label>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-warning">SİL</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Duzenle" tabindex="-1" role="dialog" aria-labelledby="DuzenleLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="DuzenleLabel">Kullanıcı Düzenle</h4>
+                    </div>
+                    <form role="form" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="KullanicilarID" id="idal" />
+                            <input type="hidden" name="Gorev" value="Degistir" />
+                            <div class="form-group">
+                                <label>Bu Kullanıcı Değiştirilecek Devam Edilsin mi?</label>
+                                <div class="form-group">
+                                    <label>Kullanıcı Adı</label>
+                                    <input class="form-control" name="KullaniciAdi" id="kadi" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Eski Şifre</label>
+                                    <input class="form-control" readonly="readonly" style="color:orangered" id="ksifre">
+                                    <label>Yeni Şifre</label>
+                                    <input class="form-control" name="KullaniciSifre" required>
+                                </div>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        ÇOMAR AI V.1.2 (ALPHA)
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>
+                                            Merhaba! Ben SiteRobotu Çomar. Kullanıcı Adı Ve Şifresini Buradan Düzenleyebilirsiniz.
+                                            Her Kullanıcı Admin Modundadır ve Diğer Kullanıcları Düzenleyebilir ve silebilir.
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        Hazırsanız Şimdi Bir Kullanıcı Güncelleyelim...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-warning">Güncelle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="Ekle" tabindex="-1" role="dialog" aria-labelledby="EkleLabel" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h4 class="modal-title" id="EkleLabel">Kullanıcı Ekle</h4>
+                    </div>
+                    <form role="form" method="post">
+                        <div class="modal-body">
+                            <input type="hidden" name="Gorev" value="Ekle" />
+                            <div class="form-group">
+                                <label>Kullanıcı Eklenecek Devam Edilsin mi?</label>
+                                <div class="form-group">
+                                    <label>Kullanıcı Adı</label>
+                                    <input class="form-control" name="KullaniciAdi" required>
+                                </div>
+                                <div class="form-group">
+                                    <label>Kullanıcı Şifresi</label>
+                                    <input class="form-control" name="KullaniciSifre" required>
+                                </div>
+                                <div class="panel panel-primary">
+                                    <div class="panel-heading">
+                                        ÇOMAR AI V.1.2 (ALPHA)
+                                    </div>
+                                    <div class="panel-body">
+                                        <p>
+                                            Merhaba! Ben SiteRobotu Çomar. Lütfen Kullanıcı Adı Ve Şifresini Kimseyle Paylaşmayın!!!!
+                                        </p>
+                                    </div>
+                                    <div class="panel-footer">
+                                        Tamam Hazırım...
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Kapat</button>
+                            <button type="submit" class="btn btn-warning">Ekle</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" tabindex="-1" role="dialog" id="slidermodal" aria-labelledby="eklelabel">
+            <div class="modal-dialog modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                        <h5>Slider Değiştir & Bak</h5>
+                    </div>
+                    <form method="post" enctype="multipart/form-data">
+                        <div class="modal-body">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class='carousel-inner'>
+                                        <div class='item active'>
+                                            <figure>
+                                                <img class="fileinput-preview fileinput-exists thumbnail img-responsive" id="sliderresmi" />
+                                            </figure>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr />
+
+                                <div class="col-sm-12">
+                                    <div class="form-group col-sm-9">
+                                        <div class="fileinput fileinput-new col-lg-12" data-provides="fileinput">
+                                            <div class="fileinput-preview fileinput-exists thumbnail img-responsive col-lg-6"></div>
+                                            <div class="col-sm-6">
+                                                <span class="btn btn-warning btn-file col-sm-6 form-control"><span class="fileinput-new">Slider</span><span class="fileinput-exists">Seç</span><input type="file" name="Resim"></span>
+                                                <br /><br />
+                                                <a href="#" class="btn btn-danger fileinput-exists col-sm-6 form-control " data-dismiss="fileinput">Sil</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group col-sm-3">
+                                        <input name="SliderID" id="sliderid" hidden="hidden">
+                                        <input name="Gorev" value="Sliders" hidden="hidden">
+                                        <input name="Slider" id="Sliderslink" hidden="hidden">
+                                        <button type="submit" class="btn btn-success col-lg-12">Güncelle</button>
+                                    </div>
+                                </div>
+                    
+                        </div>
+                    </div>
+                        </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div>
+                <div class="col-lg-12">
+                    <img src="@Model.Logo" class="img-responsive pull-left" /><h3 class="text-warning pull-right"> <strong class="text-danger">Site Bilgileri</strong> / Sitenizin Temel Bilgileri Düzenleme Alanı</h3>
+                </div>
+                <hr />
+                <form role="form" method="post" enctype="multipart/form-data">
+
+                    <input type="hidden" name="Gorev" value="Company" />
+
+                    <div class="form-group col-lg-6">
+                        <label>Site Adı</label>
+                        <input class="form-control" name="SiteAdi" value="@Model.SiteAdi" required>
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Adres</label>
+                        <textarea class="form-control" name="Adres" required>@Model.Adres</textarea>
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Hakkında</label>
+                        <textarea class="form-control" name="Hakkinda" required>@Model.Hakkinda</textarea>
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Telefon</label>
+                        <input class="form-control" name="Telefon" value="@Model.Telefon">
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Mobil Telefon</label>
+                        <input class="form-control" name="MobilTelefon" value="@Model.MobilTelefon" required>
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Facebook</label>
+                        <input class="form-control" name="Facebook" value="@Model.Facebook">
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Twitter</label>
+                        <input class="form-control" name="Twitter" value="@Model.Twitter">
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Whatsapp</label>
+                        <input class="form-control" name="Whatsapp" value="@Model.Whatsapp">
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Instagram</label>
+                        <input class="form-control" name="Instagram" value="@Model.Instagram">
+                    </div>
+
+                    <div class="form-group col-lg-3">
+                        <label>Mail Adresi</label>
+                        <textarea class="form-control" name="MailAdresi" required>@Model.MailAdresi</textarea>
+                    </div>
+                    
+                    <div class="form-group col-lg-3">
+                        <label>Firma Logosu (275X90px)</label>
+                        <div class="fileinput fileinput-new col-lg-12" data-provides="fileinput">
+                            <div class="fileinput-preview fileinput-exists thumbnail img-responsive col-lg-6"></div>
+                            <div class="col-lg-6">
+                                <span class="btn btn-warning btn-file col-lg-6 form-control"><span class="fileinput-new">Logo</span><span class="fileinput-exists">Seç</span><input type="file" name="Resim"></span>
+                                <br /><br />
+                                <a href="#" class="btn btn-danger fileinput-exists col-lg-6 form-control " data-dismiss="fileinput">Sil</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group col-lg-12">
+                        <input  name="Logo" value="@Model.Logo" hidden="hidden">
+                        <button type="submit" class="btn btn-success col-lg-12">Güncelle/Ekle</button>
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+        <div class="col-lg-12">
+            <div class="panel panel-danger">
+                <div class="panel-heading">Siteyi Sıfırlama Sistemi V.0.5 (Beta)</div>
+                <div class="panel-body"><h4>Dikkat! Bu Sistem Tüm Bilgilerinizi Silecektir. Siteyi Devrederken Yada Kapatırken Bu işlemi Yapın.</h4></div>
+                <div class="panel-footer"><button class="btn btn-danger" data-toggle="modal" data-target="#Sifirla"><i class="fa fa-trash-o"></i> Tüm Bilgileri Silip Siteyi Sıfırla</button></div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<script type="text/javascript">
+    function Islem(obj, obj2) {
+        document.getElementById("SilmeAl").value = obj;
+        document.getElementById("Silinecek").value = obj2;
+    }
+    function Islem2(obj, obj2, obj3) {
+        document.getElementById("idal").value = obj;
+        document.getElementById("kadi").value = obj2;
+        document.getElementById("ksifre").value = obj3;
+    }
+
+    function Islem3(obj, obj2) {
+        document.getElementById("sliderid").value = obj;
+        document.getElementById("sliderresmi").src = obj2;
+        document.getElementById("Sliderslink").value = obj2;
+    }
+</script>

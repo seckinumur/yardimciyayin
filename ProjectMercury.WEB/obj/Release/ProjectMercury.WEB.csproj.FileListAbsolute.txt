@@ -1,0 +1,160 @@
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\csc.exe
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\csc.exe.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\csc.rsp
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\csi.exe
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\csi.exe.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\csi.rsp
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\Microsoft.Win32.Primitives.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.AppContext.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Console.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Diagnostics.Process.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.IO.Compression.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.IO.Pipes.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Security.Claims.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Threading.Thread.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.ValueTuple.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Xml.XPath.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\vbc.exe
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\vbc.exe.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\vbc.rsp
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\VBCSCompiler.exe
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.WEB.dll.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.WEB.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.WEB.pdb
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\EntityFramework.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\EntityFramework.SqlServer.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.DAL.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.Entity.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Helpers.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Mvc.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Razor.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Webpages.Deployment.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Webpages.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Webpages.Razor.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.DAL.pdb
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.DAL.dll.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.Entity.pdb
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\ProjectMercury.Entity.dll.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\EntityFramework.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\EntityFramework.SqlServer.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Razor.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Webpages.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Webpages.Deployment.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Webpages.Razor.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Helpers.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\bin\System.Web.Mvc.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\obj\Release\ProjectMercury.WEB.csprojResolveAssemblyReference.cache
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\obj\Release\ProjectMercury.WEB.csproj.CoreCompileInputs.cache
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\obj\Release\ProjectMercury.WEB.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.WEB\obj\Release\ProjectMercury.WEB.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\csc.exe
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\csc.exe.config
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\csc.rsp
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\csi.exe
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\csi.exe.config
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\csi.rsp
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\Microsoft.Win32.Primitives.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.AppContext.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Collections.Immutable.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Console.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Diagnostics.Process.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.IO.Compression.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.IO.FileSystem.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.IO.FileSystem.DriveInfo.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.IO.Pipes.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Reflection.Metadata.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Security.AccessControl.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Security.Claims.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Security.Principal.Windows.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Threading.Thread.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.ValueTuple.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Xml.XmlDocument.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Xml.XPath.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\vbc.exe
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\vbc.exe.config
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\vbc.rsp
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\VBCSCompiler.exe
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\roslyn\VBCSCompiler.exe.config
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.WEB.dll.config
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.WEB.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.WEB.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\EntityFramework.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\EntityFramework.SqlServer.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\Microsoft.Web.Infrastructure.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.DAL.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.Entity.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Helpers.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Mvc.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Razor.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Webpages.Deployment.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Webpages.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Webpages.Razor.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.DAL.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.DAL.dll.config
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.Entity.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\ProjectMercury.Entity.dll.config
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\EntityFramework.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\EntityFramework.SqlServer.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Razor.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Webpages.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Webpages.Deployment.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Webpages.Razor.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Helpers.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\bin\System.Web.Mvc.xml
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\obj\Release\ProjectMercury.WEB.csprojResolveAssemblyReference.cache
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\obj\Release\ProjectMercury.WEB.csproj.CoreCompileInputs.cache
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\obj\Release\ProjectMercury.WEB.dll
+D:\Projeler\yardimciyayin\ProjectMercury.WEB\obj\Release\ProjectMercury.WEB.pdb

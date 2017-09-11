@@ -1,0 +1,28 @@
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\ProjectMercury.DAL.dll.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\ProjectMercury.DAL.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\ProjectMercury.DAL.pdb
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\EntityFramework.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\ProjectMercury.Entity.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\ProjectMercury.Entity.pdb
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\ProjectMercury.Entity.dll.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\EntityFramework.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\obj\Release\ProjectMercury.DAL.csprojResolveAssemblyReference.cache
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\obj\Release\ProjectMercury.DAL.csproj.CoreCompileInputs.cache
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\obj\Release\ProjectMercury.DAL.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\obj\Release\ProjectMercury.DAL.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\ProjectMercury.DAL.dll.config
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\ProjectMercury.DAL.dll
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\ProjectMercury.DAL.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\EntityFramework.dll
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\EntityFramework.SqlServer.dll
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\ProjectMercury.Entity.dll
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\ProjectMercury.Entity.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\ProjectMercury.Entity.dll.config
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\EntityFramework.xml
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\bin\Release\EntityFramework.SqlServer.xml
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\obj\Release\ProjectMercury.DAL.csprojResolveAssemblyReference.cache
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\obj\Release\ProjectMercury.DAL.csproj.CoreCompileInputs.cache
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\obj\Release\ProjectMercury.DAL.dll
+D:\Projeler\yardimciyayin\ProjectMercury.DAL\obj\Release\ProjectMercury.DAL.pdb

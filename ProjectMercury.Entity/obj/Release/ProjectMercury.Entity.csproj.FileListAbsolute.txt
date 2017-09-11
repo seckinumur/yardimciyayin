@@ -1,0 +1,21 @@
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.dll.config
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.pdb
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\bin\Release\EntityFramework.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\bin\Release\EntityFramework.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.csproj.CoreCompileInputs.cache
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.dll
+C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.dll.config
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.dll
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\bin\Release\EntityFramework.dll
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\bin\Release\EntityFramework.SqlServer.dll
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\bin\Release\EntityFramework.xml
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\bin\Release\EntityFramework.SqlServer.xml
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.csproj.CoreCompileInputs.cache
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.dll
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.pdb
+D:\Projeler\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.csprojResolveAssemblyReference.cache
