@@ -95,8 +95,6 @@
                 @{
                     foreach (var item in Model.Urunler)
                     {
-
-
                         <div class="page col-sm-3 ">
                             <div class="thumbnail store style1">
                                 <div class="header">
@@ -110,7 +108,7 @@
                                     </figure>
                                     <div class="icons">
                                         <a class="icon semi-circle" href="javascript:void(0);" onclick="SepeteEkle('@item.UrunID');"><i class="fa fa-cart-plus"></i></a>
-                                        <a class="icon semi-circle" href="javascript:void(0);" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@item.UrunAdi','@item.Image','@item.UrunFiyati','@item.IndirimliFiyati','@item.UrunAciklama','@item.UrunID')"><i class="fa fa-search"></i></a>
+                                        <a class="icon semi-circle" href="javascript:void(0);" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@item.UrunID')"><i class="fa fa-search"></i></a>
                                     </div>
                                 </div>
                                 <div class="caption">
@@ -118,12 +116,6 @@
                                     <div class="price">
                                         <small class="amount off">@item.UrunFiyati₺</small>
                                         <span class="amount text-primary">@item.IndirimliFiyati₺</span>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <a href="javascript:void(0);"><i class="fa fa-cart-plus mr-5"></i><small class="amount">Sepet</small></a>
-                                    </div>
-                                    <div class="col-xs-6">
-                                        <a href="javascript:void(0);" data-toggle="modal" data-target=".productQuickView" onclick="DataGom('@item.UrunAdi','@item.Image','@item.UrunFiyati','@item.IndirimliFiyati','@item.UrunAciklama')"><i class="fa fa-search mr-5"></i><small class="amount">İncele</small></a>
                                     </div>
                                 </div>
                             </div>
@@ -190,14 +182,28 @@
 
 <script type="text/javascript">
 
-    function DataGom(obj, obj2, obj3, obj4, obj5,obj6) {
-        document.getElementById("urunAdi").innerHTML = obj;
-        document.getElementById("urunResmi").src = obj2;
-        document.getElementById("urunFiyati").innerHTML = "Ürün Fiyatı: " + obj3 + "₺";
-        document.getElementById("urunIndirim").innerHTML = "İndirimli Fiyatı: " + obj4 + "₺";
-        document.getElementById("urunAciklama").innerHTML = obj5;
-        document.getElementById("ManuelID").value = obj6;
-    }
+    function DataGom(obj) {
+
+        var UrunId = obj;
+        var Veri = JSON.stringify({
+            'UrunId': UrunId
+        });
+        document.getElementById("ManuelID").value = obj;
+
+        $.ajax({
+            type: 'POST',
+            url: '/View/UrunBul/',
+            data: Veri,
+            contentType: 'application/json',
+            success: function (data) {
+                document.getElementById("urunAdi").innerHTML = data.UrunAdi;
+                document.getElementById("urunResmi").src = data.Image;
+                document.getElementById("urunFiyati").innerHTML = "Ürün Fiyatı: " + data.UrunFiyati + "₺";
+                document.getElementById("urunIndirim").innerHTML = "İndirimli Fiyatı: " + data.IndirimliFiyati + "₺";
+                document.getElementById("urunAciklama").innerHTML = data.UrunAciklama;
+            },
+        });
+    };
     function SepeteEkle(obj) {
         var urunId = obj;
         var data = JSON.stringify({

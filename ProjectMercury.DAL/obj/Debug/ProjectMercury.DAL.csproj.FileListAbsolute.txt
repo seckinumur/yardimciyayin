@@ -25,3 +25,17 @@ C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSyst
 C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\obj\Debug\ProjectMercury.DAL.csproj.CoreCompileInputs.cache
 C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\obj\Debug\ProjectMercury.DAL.dll
 C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.DAL\obj\Debug\ProjectMercury.DAL.pdb
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\ProjectMercury.DAL.dll.config
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\ProjectMercury.DAL.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\ProjectMercury.DAL.pdb
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\EntityFramework.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\ProjectMercury.Entity.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\ProjectMercury.Entity.pdb
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\ProjectMercury.Entity.dll.config
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\EntityFramework.xml
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\obj\Debug\ProjectMercury.DAL.csprojResolveAssemblyReference.cache
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\obj\Debug\ProjectMercury.DAL.csproj.CoreCompileInputs.cache
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\obj\Debug\ProjectMercury.DAL.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.DAL\obj\Debug\ProjectMercury.DAL.pdb

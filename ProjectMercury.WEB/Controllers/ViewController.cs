@@ -508,7 +508,12 @@ namespace ProjectMercury.WEB.Controllers
                 return RedirectToAction("Hata");
             }
         }
-        
+        [HttpPost]
+        public ActionResult UrunBul(int UrunId)
+        {
+            var Gonder = UrunRepo.UrunBulAjax(UrunId);
+            return Json(Gonder, JsonRequestBehavior.AllowGet);
+        }
         public ActionResult Hata()
         {
             return View();

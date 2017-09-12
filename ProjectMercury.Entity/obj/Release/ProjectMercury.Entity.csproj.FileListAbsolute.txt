@@ -19,3 +19,14 @@ D:\Projeler\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entit
 D:\Projeler\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.dll
 D:\Projeler\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.pdb
 D:\Projeler\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.csprojResolveAssemblyReference.cache
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.dll.config
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Release\ProjectMercury.Entity.pdb
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Release\EntityFramework.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Release\EntityFramework.SqlServer.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Release\EntityFramework.xml
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Release\EntityFramework.SqlServer.xml
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.csprojResolveAssemblyReference.cache
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.csproj.CoreCompileInputs.cache
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\obj\Release\ProjectMercury.Entity.pdb

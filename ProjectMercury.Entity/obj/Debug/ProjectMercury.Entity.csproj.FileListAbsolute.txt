@@ -19,3 +19,14 @@ C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSyst
 C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\obj\Debug\ProjectMercury.Entity.csproj.CoreCompileInputs.cache
 C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\obj\Debug\ProjectMercury.Entity.dll
 C:\Users\secki\OneDrive\Belgeler\Visual Studio 2017\Projects\ChoiceECommerceSystems-ProjectMercury\ProjectMercury.Entity\obj\Debug\ProjectMercury.Entity.pdb
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Debug\ProjectMercury.Entity.dll.config
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Debug\ProjectMercury.Entity.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Debug\ProjectMercury.Entity.pdb
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Debug\EntityFramework.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Debug\EntityFramework.xml
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\obj\Debug\ProjectMercury.Entity.csprojResolveAssemblyReference.cache
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\obj\Debug\ProjectMercury.Entity.csproj.CoreCompileInputs.cache
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\obj\Debug\ProjectMercury.Entity.dll
+C:\Users\secki\Source\Repos\yardimciyayin\ProjectMercury.Entity\obj\Debug\ProjectMercury.Entity.pdb

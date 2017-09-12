@@ -179,6 +179,21 @@ namespace ProjectMercury.DAL.Repository
                 }).FirstOrDefault();
             }
         }
+        public static VMUrun UrunBulAjax(int ID) //Ürün Bul
+        {
+            using (DBCON db = new DBCON())
+            {
+                return db.Urun.Where(p => p.UrunID == ID).Select(p => new VMUrun
+                {
+                    Image = p.Image,
+                    UrunAciklama = p.UrunAciklama,
+                    UrunAdi = p.UrunAdi,
+                    IndirimliFiyati = p.IndirimliFiyati == 0 ? p.UrunFiyati : p.IndirimliFiyati,
+                    UrunFiyati = p.UrunFiyati,
+                    UrunID = p.UrunID,
+                }).FirstOrDefault();
+            }
+        }
         public static List<VMUrun> UrunleriBul() //Ürünleri Bul
         {
             using (DBCON db = new DBCON())
